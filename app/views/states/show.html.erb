@@ -49,9 +49,9 @@
                 <td><%= d.date %></td>
                 <td><%= d.value %></td>
               </tr>
+              <%= will_paginate @datawork %>
               <% end %>
             </tbody>
-   <%= will_paginate @datawork %>
           </table>
         </div>
 
