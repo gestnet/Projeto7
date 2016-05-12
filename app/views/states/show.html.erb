@@ -49,10 +49,19 @@
                 <td><%= d.date %></td>
                 <td><%= d.value %></td>
               </tr>
-              <%= will_paginate @datawork %>
               <% end %>
             </tbody>
           </table>
+          <div>
+
+            <% if @datawork.previous_page %>
+            <%= link_to "< Previous", params.merge(:page => @datawork.previous_page)%>
+            <% end %>
+            Page <%= @datawork.current_page %> of <%=@datawork.total_pages %>
+            <% if @datawork.next_page %>
+            <%= link_to " Next >", params.merge(:page => @datawork.next_page)%>
+            <% end %>
+          </div>
         </div>
 
       </div>
