@@ -63,9 +63,9 @@
         <h3 class="column-title">Cálculos</h3>
         <% if params[:looks].present? %> 
           <p>Análise dos preços mínimo, médio e máximo das Habitações no EUA no ano de <strong><%= params[:looks] %></strong></p>
-          <<p><strong>Mínimo: </strong><%= @datawork.minimum("value") %></p>
+          <p><strong>Mínimo: </strong><%= @datawork.minimum("value") %></p>
           <p><strong>Médio: </strong> <%= @datawork.average("value") %></p>
-          <p><strong>Máximo: </strong> <%= @datawork.maximum("value") %></p>
+          <p><strong>Máximo: </strong> <%= @datawork.maximum("value") %></p>  
         <% else %>
           <p>Análise dos preços mínimo, médio e máximo das Habitações no EUA entre <strong>1975 e 2016</strong></p>
           <p><strong>Mínimo: </strong><%= @datawork.minimum("value") %></p>
