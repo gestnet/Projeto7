@@ -22,7 +22,7 @@ gem 'highstock-rails'
 
 gem 'rest-client'
 
-gem 'will_paginate'
+gem 'will_paginate', '~> 3.1.0'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
