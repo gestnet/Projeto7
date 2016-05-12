@@ -3,7 +3,7 @@ $(function () {
     var stateId = $('#container').attr("data-state");
 
 
-    $.getJSON('http://localhost:3000/states/' + stateId, function (data) {
+    $.getJSON('/states/' + stateId, function (data) {
         // Create the chart
         $('#container').highcharts('StockChart', {
 
