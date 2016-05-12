@@ -1,0 +1,46 @@
+<section id="cta">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title text-center wow fadeInDown">Página de Contacto</h2>
+      <div class="text-center">
+        <p id="notice"><%= notice %></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+        <div id="google-map" style="height:650px" data-latitude="41.366871" data-longitude="-8.194805"></div>
+        <div class="container-wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-4 col-sm-offset-8">
+                        <div class="contact-form">
+                            <address>
+                              <strong>ESCOLA SUPERIOR DE TECNOLOGIA E GESTÃO DE FELGUEIRAS</strong><br>
+                              Rua do Curral - Casa do Curral, Margaride<br>
+                              4610-156 Felgueiras<br>
+                              <abbr title="Telefone">Tlf:</abbr> (+351) 255 314 002
+                            </address>
+
+                            <form id="main-contact-form" name="contact-form" method="post" action="#">
+                                <div class="form-group">
+                                    <input type="text" name="name" class="form-control" placeholder="Nome" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" name="email" class="form-control" placeholder="Email" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="subject" class="form-control" placeholder="Assunto" required>
+                                </div>
+                                <div class="form-group">
+                                    <textarea name="message" class="form-control" rows="8" placeholder="Mensagem" required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!--/#bottom-->

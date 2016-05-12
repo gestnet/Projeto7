@@ -1,0 +1,61 @@
+<section id="cta">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title text-center wow fadeInDown"><%= @state.name %></h2>
+      <p class="text-center wow fadeInDown"><strong>Url: </strong><%= @state.url %></p>
+      <div class="text-center">
+        <%= link_to 'Editar', edit_state_path(@state), class: 'btn btn-success btn-xs' %>
+        <%= link_to 'Voltar', states_path, class: 'btn btn-info btn-xs' %>
+      </div>
+      <div class="text-center">
+        <p id="notice"><%= notice %></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-8 wow fadeInLeft">
+        <h3 class="column-title">Preços Habitação</h3>
+        <!-- 16:9 aspect ratio -->
+        <div class="row" id="container" data-state= <%= @state.id %> >
+
+        </div>
+      </div>
+
+      <div class="col-sm-4 wow fadeInRight">
+        <h3 class="column-title">Pesquisa por Ano</h3>
+
+        <div>
+          <%= form_tag(state_path, :method => :get) do %>
+          <%= number_field_tag 'looks', nil, placeholder: 'All', within: 1975...2017, disable: true, class: 'col-md-6 btn btn-default' %>
+          <%= submit_tag "Pesquisar", class: 'col-md-3 col-md-offset-1 btn btn-primary' %>
+          <% end %>
+        </div>
+        <div>
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Value</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <% @datawork.each do |d| %>
+              <tr>
+                <td><%= d.date %></td>
+                <td><%= d.value %></td>
+              </tr>
+              <% end %>
+            </tbody>
+
+          </table>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section><!--/#about-->

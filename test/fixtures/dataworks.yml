@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: 2016-05-10
+  value: 9.99
+  state_id: 
+
+two:
+  date: 2016-05-10
+  value: 9.99
+  state_id: 
