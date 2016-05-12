@@ -52,19 +52,28 @@
               <% end %>
             </tbody>
           </table>
-          <div>
+          
+          <%= will_paginate @datawork %>
 
-            <% if @datawork.previous_page %>
-            <%= link_to "< Previous", params.merge(:page => @datawork.previous_page)%>
-            <% end %>
-            Page <%= @datawork.current_page %> of <%=@datawork.total_pages %>
-            <% if @datawork.next_page %>
-            <%= link_to " Next >", params.merge(:page => @datawork.next_page)%>
-            <% end %>
-          </div>
         </div>
 
       </div>
+
+      <div class="col-sm-8 wow fadeInLeft">
+        <h3 class="column-title">Cálculos</h3>
+        <% if params[:looks].present? %> 
+          <p>Análise dos preços mínimo, médio e máximo das Habitações no EUA no ano de <strong><%= params[:looks] %></strong></p>
+          <<p><strong>Mínimo: </strong><%= @datawork.minimum("value") %></p>
+          <p><strong>Médio: </strong> <%= @datawork.average("value") %></p>
+          <p><strong>Máximo: </strong> <%= @datawork.maximum("value") %></p>
+        <% else %>
+          <p>Análise dos preços mínimo, médio e máximo das Habitações no EUA entre <strong>1975 e 2016</strong></p>
+          <p><strong>Mínimo: </strong><%= @datawork.minimum("value") %></p>
+          <p><strong>Médio: </strong> <%= @datawork.average("value") %></p>
+          <p><strong>Máximo: </strong> <%= @datawork.maximum("value") %></p>
+        <% end %>
+      </div>
+
     </div>
   </div>
 </section><!--/#about-->

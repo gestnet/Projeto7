@@ -18,6 +18,4 @@ class Datawork < ActiveRecord::Base
   	def maximum(column_name, options = {})
   		calculate(:maximum, column_name, options)
   	end
-
-    self.per_page = 10
 end

@@ -17,10 +17,10 @@ class StatesController < ApplicationController
   def show
 
     if params[:looks].present? && params[:id]
-      @datawork = Datawork.where(state_id: params[:id]).search_data(params[:looks]).page(params[:pages]).per_page(10)
+      @datawork = Datawork.where(state_id: params[:id]).search_data(params[:looks]).page(params[:page]).per_page(10)
 
       else 
-        @datawork = Datawork.where(state_id: params[:id]).page(params[:pages]).per_page(10)
+        @datawork = Datawork.where(state_id: params[:id]).page(params[:page]).per_page(10)
     end
     respond_to do |format|
       format.html do
